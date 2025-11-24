@@ -4,77 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Øvelse 3 - HTML 5</title>
 </head>
 
 <body>
-    <header>
-        <form>
-            <label for="search">Søk</label>
-            <input type="search" id="search" placeholder="Søk her">
-        </form>
-        <img src="#" alt="Logo">
-        <nav>
-            <ul>
-                <li><a href="#">Hjem</a></li>
-                <li><a href="#">Nettside-mal</a></li>
-                <li><a href="#">Labøvelse</a></li>
-                <li><a href="#">Kontaktinformasjon</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <article>
-                <h2>Studieplan</h2>
-            </article>
-        </section>
-    </main>
-    <aside>
-        <section>
-            <form action="#">
-                <fieldset>
+    <div id="grid-container">
+        <header id="globalheader">
+
+            <img src="#" alt="Logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Hjem</a></li>
+                    <li><a href="#">Nettside-mal</a></li>
+                    <li><a href="#">Labøvelse</a></li>
+                    <li><a href="#">Kontaktinformasjon</a></li>
+                </ul>
+            </nav>
+            <form class="search">
+                <input type="search" id="search" placeholder="Søk her">
+                <button type="submit">Søk</button>
+            </form>
+        </header>
+        <main>
+            <section class="article-wrapper">
+                <article class="article-card">
+                    <h2>Studieplan</h2>
+                </article>
+                <article class="article-card">
+                    <h2>Ukeplan</h2>
+                </article>
+                <article class="article-card">
+                    <h2>Black</h2>
+                </article>
+            </section>
+            <section>
+                <form action="#">
+                    <fieldset class="form">
+                        <legend>
+                            <h3>Spørreskjema</h3>
+                        </legend>
+
+                        <label for="q1">Spørsmål 1</label>
+                        <select id="q1">
+                            <option value="ja">Ja</option>
+                            <option value="nei">Nei</option>
+                            <option value="kanskje">Kanskje</option>
+                        </select>
+
+                        <label for="q2">Spørsmål 2</label>
+                        <input type="radio">
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <aside>
+            <h3>aside</h3>
+        </aside>
+        <footer>
+            <form>
+                <fieldset class="form">
                     <legend>
-                        <h3>Spørreskjema</h3>
+                        <h3>Skjema for kommentar</h3>
                     </legend>
 
-                    <label for="q1">Spørsmål 1</label>
-                    <select id="q1">
-                        <option value="ja">Ja</option>
-                        <option value="nei">Nei</option>
-                        <option value="kanskje">Kanskje</option>
-                    </select>
+                    <label for="firstname">Fornavn</label>
+                    <input type="text" id="firstname" placeholder="Kari">
 
-                    <label for="q2">Spørsmål 2</label>
-                    <input type="radio">
+                    <label for="lastname">Etternavn</label>
+                    <input type="text" id="lastname" placeholder="Nordmann">
+
+                    <label for="email">E-post</label>
+                    <input type="email" id="email" placeholder="kari@mail.no">
+
+                    <label for="comment">Din kommentar</label>
+                    <textarea id="comment" rows="4" cols="50" placeholder="Jeg synes at..."></textarea>
+
+                    <button type="submit">Send inn</button>
                 </fieldset>
             </form>
-        </section>
-    </aside>
-    <footer>
-        <form>
-            <fieldset>
-                <legend>
-                    <h3>Skjema for kommentar</h3>
-                </legend>
-
-                <label for="firstname">Fornavn</label>
-                <input type="text" id="firstname" placeholder="Kari">
-
-                <label for="lastname">Etternavn</label>
-                <input type="text" id="lastname" placeholder="Nordmann">
-
-                <label for="email">E-post</label>
-                <input type="email" id="email" placeholder="kari@mail.no">
-
-                <label for="comment">Din kommentar</label>
-                <textarea id="comment" rows="4" cols="50" placeholder="Jeg synes at..."></textarea>
-
-                <button type="submit">Send inn</button>
-            </fieldset>
-        </form>
-    </footer>
-
+        </footer>
+    </div>
 </body>
 
 </html>
