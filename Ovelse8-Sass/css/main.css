@@ -1,3 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+.border-radius, #categories article, img {
+  border-radius: 1rem;
+}
+
+i {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #000;
+  border-radius: 50px;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+/*
+@mixin grid2-child ($grid-column, $grid-row){
+    grid-column: $grid-column;
+    grid-row: $grid-row;
+}*/
+img {
+  width: 100%;
+}
+
+.ul-clear, #global-nav ul, #global-footer ul, #news article ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: aliceblue;
+  font-family: "Source Code Pro", sans-serif;
+}
+
+.body-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+header, main, footer {
+  padding: 1rem;
+}
+
+#global-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: header;
+  background-color: #f8fffd;
+}
+#global-header img {
+  border-radius: 50px;
+}
+
+#welcome-banner {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+#welcome-banner div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: rgba(255, 255, 255, 0.4862745098);
+}
+#welcome-banner h2 {
+  position: absolute;
+}
+#welcome-banner img {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#main-container {
+  grid-area: main;
+}
+
+#global-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  bottom: 1rem;
+  /*     background-color: variables.$dark-green-color; */
+}
+#global-nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: #2e4b40;
+  width: 100%;
+  padding: 2rem 3rem 2rem 3rem;
+  margin: 1rem;
+  border-radius: 100px;
+}
+
+#global-footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: normal;
+  align-items: center;
+  height: 350px;
+}
+#global-footer a img {
+  width: 100px;
+  border-radius: 200px;
+}
+#global-footer ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#global-footer ul li i {
+  color: #000;
+}
+
+#categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto repeat(2, 1fr);
+  gap: 1rem;
+}
+#categories h2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#categories #el {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+#categories #fashion {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#categories #home {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+#categories article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ececec;
+}
+
+#news {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(2, auto);
+}
+#news h2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#news .scroll-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  overflow: scroll;
+  gap: 1rem;
+}
+#news article {
+  flex-grow: 1;
+  min-width: 500px;
+}
+#news article a i {
+  position: absolute;
+  padding: 1rem;
+}
+#popular {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(2, auto);
+}
+#popular h2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#popular .articles {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#popular .articles article {
+  min-width: 160px;
+  max-width: 600px;
+  flex-grow: 1;
 }/*# sourceMappingURL=main.css.map */
