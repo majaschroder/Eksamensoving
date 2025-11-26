@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+$light-grey-color: #ececec;
+$dark-green-color: #2e4b40;
+$heading-color: #242b27;
+$background-color: #f8fffd;
+
+.border-radius{
+    border-radius: 1rem;
+}
+
+
+i{
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.btn{
+    background-color: #000;
+    border-radius: 50px;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
