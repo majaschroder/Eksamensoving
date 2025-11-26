@@ -30,22 +30,20 @@ header, main, footer{
     }
 }
 
-#welcome-banner{
-    @include mixins.grid2(auto, auto);
+#welcome-banner{  
+        background-image: url(https://picsum.photos/600/400);
+        background-repeat: none;
+        background-size: cover;
+        @extend .border-radius;
 
-    div{
+    header{
         @include mixins.flex(center, center, column);
-        text-align: center;
-        @include mixins.grid2-child(1, 2, 1, 2);
-        background-color: #ffffff7c;
+        background-color: #ffffffa2;
+        height: 300px;
     }
 
     h2{
         position: absolute;
-    }
-
-    img{
-        @include mixins.grid2-child(1, 2, 1, 2);
     }
 }
 

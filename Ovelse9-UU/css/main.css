@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
-.border-radius, #categories article, img {
+.border-radius, #welcome-banner, #categories article, img {
   border-radius: 1rem;
 }
 
@@ -64,31 +64,21 @@ header, main, footer {
 }
 
 #welcome-banner {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  background-image: url(https://picsum.photos/600/400);
+  background-repeat: none;
+  background-size: cover;
 }
-#welcome-banner div {
+#welcome-banner header {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  background-color: rgba(255, 255, 255, 0.4862745098);
+  background-color: rgba(255, 255, 255, 0.6352941176);
+  height: 300px;
 }
 #welcome-banner h2 {
   position: absolute;
-}
-#welcome-banner img {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
 }
 
 #main-container {
